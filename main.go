@@ -7,10 +7,11 @@ import (
 func main() {
 	ch := make(chan bool)
 	d := dom.DOM{
-		Body: []dom.Node{
-			&dom.Div{InnerHTML: "Hi there sail and raft"},
-		},
+		Body: dom.NewBody(
+			dom.NewDiv("Hi there olly"),
+		),
 	}
+
 	d.Render()
 
 	<-ch // block indefinitely to keep program alive
