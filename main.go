@@ -1,14 +1,14 @@
 package main
 
-import (
-	"github.com/AlexTheProgrammer/sail/dom"
-)
+import "mfrp/dom"
 
 func main() {
 	ch := make(chan bool)
 	d := dom.DOM{
 		Body: dom.NewBody(
-			dom.NewDiv("Hi there olly"),
+			dom.NewDiv("Hi there olly",
+				dom.NewDiv("I made a nested div"),
+			),
 		),
 	}
 
