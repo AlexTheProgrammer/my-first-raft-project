@@ -1,18 +1,18 @@
 package dom
 
 // Support Vector Graphic
-type SVG struct {
+type SVGEl struct {
 	*Element
 }
 
-func NewSVG(innerHTML string, nodes ...Node) *SVG {
-	return &SVG{
+func NewSVG(innerHTML string, nodes ...Node) *SVGEl {
+	return &SVGEl{
 		Element: NewElement(innerHTML, nodes...),
 	}
 }
 
-func (b *SVG) OpenTag() string  { return "<svg>" }
-func (b *SVG) CloseTag() string { return "</svg>" }
-func (b *SVG) IsNil() bool {
+func (b *SVGEl) OpenTag() string  { return "<svg>" }
+func (b *SVGEl) CloseTag() string { return "</svg>" }
+func (b *SVGEl) IsNil() bool {
 	return nil == b
 }

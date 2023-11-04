@@ -1,17 +1,17 @@
 package dom
 
-type Div struct {
+type DivEl struct {
 	*Element
 }
 
-func NewDiv(innerHTML string, nodes ...Node) *Div {
-	return &Div{
+func Div(innerHTML string, nodes ...Node) *DivEl {
+	return &DivEl{
 		Element: NewElement(innerHTML, nodes...),
 	}
 }
 
-func (d *Div) OpenTag() string  { return "<div>" }
-func (d *Div) CloseTag() string { return "</div>" }
-func (d *Div) IsNil() bool {
+func (d *DivEl) OpenTag() string  { return "<div>" }
+func (d *DivEl) CloseTag() string { return "</div>" }
+func (d *DivEl) IsNil() bool {
 	return nil == d
 }

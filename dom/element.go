@@ -12,6 +12,10 @@ func NewElement(innerHTML string, nodes ...Node) *Element {
 	}
 }
 
+func (e *Element) El(n Node) {
+	e.Ns = append(e.Ns, n)
+}
+
 func (e *Element) IsNil() bool {
 	return nil == e
 }

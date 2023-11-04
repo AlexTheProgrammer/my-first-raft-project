@@ -1,18 +1,18 @@
 package main
 
-import "mfrp/dom"
+import d "mfrp/dom"
 
 func main() {
 	ch := make(chan bool)
-	d := dom.DOM{
-		Body: dom.NewBody(
-			dom.NewDiv("",
-				dom.NewDiv("",
-					dom.NewUL("",
-						dom.NewLI("",
-							dom.NewA("",
-								dom.NewSVG(""),
-								dom.NewSpan("Dashboard"),
+	d := d.DOM{
+		Body: d.Body(
+			d.Div("",
+				d.Div("",
+					d.UL("",
+						d.LI("",
+							d.A("",
+								d.SVG(""),
+								d.Span("Dashboard"),
 							),
 						),
 					),

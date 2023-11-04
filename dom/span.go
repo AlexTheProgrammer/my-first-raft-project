@@ -1,17 +1,17 @@
 package dom
 
-type Span struct {
+type SpanEl struct {
 	*Element
 }
 
-func NewSpan(innerHTML string, nodes ...Node) *Span {
-	return &Span{
+func NewSpan(innerHTML string, nodes ...Node) *SpanEl {
+	return &SpanEl{
 		Element: NewElement(innerHTML, nodes...),
 	}
 }
 
-func (b *Span) OpenTag() string  { return "<span>" }
-func (b *Span) CloseTag() string { return "</span>" }
-func (b *Span) IsNil() bool {
+func (b *SpanEl) OpenTag() string  { return "<span>" }
+func (b *SpanEl) CloseTag() string { return "</span>" }
+func (b *SpanEl) IsNil() bool {
 	return nil == b
 }
