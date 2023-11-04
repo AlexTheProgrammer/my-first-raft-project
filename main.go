@@ -27,7 +27,7 @@ func main() {
 								d.Props{
 									Class: d.NewClass(
 										"flex items-center",                              // center items in menu
-										"p-2 text-gray-900 rounded-lg dark:text-white",   // text formatting
+										"p-2 text-gray-600 rounded-lg dark:text-white",   // text formatting
 										"hover:bg-gray-100 dark:hover:bg-gray-700 group", // hover behaviour
 									),
 								},
