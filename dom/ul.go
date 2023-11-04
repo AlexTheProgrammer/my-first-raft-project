@@ -5,14 +5,13 @@ type ULEl struct {
 	*Element
 }
 
-func UL(innerHTML string, nodes ...Node) *ULEl {
+func UL(hp Props, nodes ...Node) *ULEl {
 	return &ULEl{
-		Element: NewElement(innerHTML, nodes...),
+		Element: NewElement(hp, nodes...),
 	}
 }
 
-func (u *ULEl) OpenTag() string  { return "<ul>" }
-func (u *ULEl) CloseTag() string { return "</ul>" }
+func (u *ULEl) Tag() string { return "ul" }
 func (u *ULEl) IsNil() bool {
 	return nil == u
 }

@@ -5,14 +5,13 @@ type P struct {
 	*Element
 }
 
-func NewP(innerHTML string, nodes ...Node) *P {
+func NewP(hp Props, nodes ...Node) *P {
 	return &P{
-		Element: NewElement(innerHTML, nodes...),
+		Element: NewElement(hp, nodes...),
 	}
 }
 
-func (b *P) OpenTag() string  { return "<svg>" }
-func (b *P) CloseTag() string { return "</svg>" }
+func (b *P) Tag() string { return "svg" }
 func (b *P) IsNil() bool {
 	return nil == b
 }

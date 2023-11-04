@@ -5,14 +5,13 @@ type AEl struct {
 	*Element
 }
 
-func A(innerHTML string, nodes ...Node) *AEl {
+func A(hp Props, nodes ...Node) *AEl {
 	return &AEl{
-		Element: NewElement(innerHTML, nodes...),
+		Element: NewElement(hp, nodes...),
 	}
 }
 
-func (u *AEl) OpenTag() string  { return "<a>" }
-func (u *AEl) CloseTag() string { return "</a>" }
+func (u *AEl) Tag() string { return "a" }
 func (u *AEl) IsNil() bool {
 	return nil == u
 }

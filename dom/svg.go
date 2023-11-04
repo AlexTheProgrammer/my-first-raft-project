@@ -5,14 +5,13 @@ type SVGEl struct {
 	*Element
 }
 
-func SVG(innerHTML string, nodes ...Node) *SVGEl {
+func SVG(hp Props, nodes ...Node) *SVGEl {
 	return &SVGEl{
-		Element: NewElement(innerHTML, nodes...),
+		Element: NewElement(hp, nodes...),
 	}
 }
 
-func (b *SVGEl) OpenTag() string  { return "<svg>" }
-func (b *SVGEl) CloseTag() string { return "</svg>" }
+func (b *SVGEl) Tag() string { return "svg" }
 func (b *SVGEl) IsNil() bool {
 	return nil == b
 }
