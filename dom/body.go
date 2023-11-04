@@ -13,7 +13,7 @@ func Body(nodes ...Node) *BodyEl {
 }
 
 func (b *BodyEl) Div(innerHTML string) *BodyEl {
-	b.El(NewDiv(innerHTML))
+	b.El(Div(innerHTML))
 
 	return b
 }

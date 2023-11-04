@@ -5,7 +5,7 @@ type AEl struct {
 	*Element
 }
 
-func NewA(innerHTML string, nodes ...Node) *AEl {
+func A(innerHTML string, nodes ...Node) *AEl {
 	return &AEl{
 		Element: NewElement(innerHTML, nodes...),
 	}

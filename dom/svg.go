@@ -5,7 +5,7 @@ type SVGEl struct {
 	*Element
 }
 
-func NewSVG(innerHTML string, nodes ...Node) *SVGEl {
+func SVG(innerHTML string, nodes ...Node) *SVGEl {
 	return &SVGEl{
 		Element: NewElement(innerHTML, nodes...),
 	}

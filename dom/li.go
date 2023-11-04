@@ -5,7 +5,7 @@ type LIEl struct {
 	*Element
 }
 
-func NewLI(innerHTML string, nodes ...Node) *LIEl {
+func LI(innerHTML string, nodes ...Node) *LIEl {
 	return &LIEl{
 		Element: NewElement(innerHTML, nodes...),
 	}

@@ -5,7 +5,7 @@ type ULEl struct {
 	*Element
 }
 
-func NewUL(innerHTML string, nodes ...Node) *ULEl {
+func UL(innerHTML string, nodes ...Node) *ULEl {
 	return &ULEl{
 		Element: NewElement(innerHTML, nodes...),
 	}

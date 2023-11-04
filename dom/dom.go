@@ -10,7 +10,7 @@ import (
 
 type DOM struct {
 	Header *Header
-	Body   *Body
+	Body   *BodyEl
 }
 
 type Node interface {
