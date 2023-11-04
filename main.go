@@ -6,8 +6,17 @@ func main() {
 	ch := make(chan bool)
 	d := dom.DOM{
 		Body: dom.NewBody(
-			dom.NewDiv("Hi there olly",
-				dom.NewDiv("I made a nested div"),
+			dom.NewDiv("",
+				dom.NewDiv("",
+					dom.NewUL("",
+						dom.NewLI("",
+							dom.NewA("",
+								dom.NewSVG(""),
+								dom.NewSpan("Dashboard"),
+							),
+						),
+					),
+				),
 			),
 		),
 	}

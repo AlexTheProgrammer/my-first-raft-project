@@ -5,6 +5,13 @@ type Element struct {
 	innerHTML string
 }
 
+func NewElement(innerHTML string, nodes ...Node) *Element {
+	return &Element{
+		innerHTML: innerHTML,
+		Ns:        nodes,
+	}
+}
+
 func (e *Element) IsNil() bool {
 	return nil == e
 }

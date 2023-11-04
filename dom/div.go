@@ -1,15 +1,12 @@
 package dom
 
 type Div struct {
-	Element
+	*Element
 }
 
 func NewDiv(innerHTML string, nodes ...Node) *Div {
 	return &Div{
-		Element: Element{
-			innerHTML: innerHTML,
-			Ns:        nodes,
-		},
+		Element: NewElement(innerHTML, nodes...),
 	}
 }
 
